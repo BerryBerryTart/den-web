@@ -1,0 +1,69 @@
+@import url('https://fonts.cdnfonts.com/css/joystix');
+
+.splash-screen {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.static-bg {
+  background-color: rgb(166, 32, 48);
+  height: 100vh;
+  width: 100vw;
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  z-index: -2;
+}
+
+.repeating-bg {
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  z-index: -1;
+  background-image: url('../../assets/UI/tile-bg.png');
+  filter: invert(86%) sepia(85%) saturate(6925%) hue-rotate(311deg) brightness(102%) contrast(106%);
+  animation: scrolling 10s linear infinite;
+}
+
+@keyframes scrolling {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: 512px 512px;
+  }
+}
+
+#splash-logo {
+  margin-top: 100px;
+  max-width: calc(50vw);
+  min-width: 500px;
+  max-height: auto;
+}
+
+#start-menu {
+  font-family: 'Joystix', sans-serif;
+  font-size: 5rem;
+  color: white;
+  text-shadow: 0px 0px 5px black, 0 0 5px black, 0 0 5px black, 0 0 5px black;
+  animation: menu-bounce 3s  infinite;
+}
+
+#start-menu:hover {
+  cursor: pointer;
+}
+
+@keyframes menu-bounce {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-30px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}

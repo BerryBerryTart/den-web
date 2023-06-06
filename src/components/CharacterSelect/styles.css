@@ -1,0 +1,154 @@
+@import url('https://fonts.cdnfonts.com/css/joystix');
+
+:root {
+  --background-img-size: 120px;
+}
+
+#character-select-title {
+  position: fixed;
+  z-index: 100;
+  left: 50%;
+  transform: translateX(-50%);
+  color: white;
+  font-family: 'Joystix', sans-serif;
+  font-size: 2rem;
+  margin-top: 10px;
+  text-shadow:1px 1px 5px rgb(33, 33, 33), 1px 1px 5px rgb(33, 33, 33);
+  filter: drop-shadow(0 0 0.75rem black);
+  animation: fade 3s ease infinite;
+}
+
+#character-select-container {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: row;
+  overflow: hidden;
+}
+
+#character-menu-container {
+  width: 100%;
+}
+
+#character-menu {
+  position: absolute;
+  z-index: 10;
+  bottom: 0;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.menu-thumb{
+  width: auto;
+  height: 8vh
+}
+
+#character-left {
+  width: 50vw;
+}
+
+#character-right {
+  transform: scaleX(-1);
+  width: 50vw;
+}
+
+.portrait-container {
+  position: absolute;
+  display: inline-flex;
+  justify-content: flex-end;
+  flex-direction: row;
+  height: 100vh;
+  min-width: 50vw;
+}
+
+.character-profile-image {
+  position: absolute;
+  overflow: clip;
+  z-index: 1;
+  bottom: 0;
+  flex-shrink: 0;
+  height: 100%;
+}
+
+.character-profile-bg {
+  position: absolute;
+  width: 50vw;
+  height: 100vh;
+}
+
+.profile-repeat-bg {
+  position: absolute;
+  background-image: url('../../assets/UI/tile-bg.png');
+  background-repeat: repeat;
+  width: 50vw;
+  height: 100vh;
+  background-size: var(--background-img-size);
+}
+
+.left-repeat {
+  animation: scrolling-left 5s linear infinite;
+}
+
+.right-repeat {
+  animation: scrolling-left 5s linear infinite;
+}
+
+@keyframes scrolling-left {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: var(--background-img-size) var(--background-img-size);
+  }
+}
+
+@keyframes scrolling-right {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: 
+      calc(var(--background-img-size) *-1) 
+      var(--background-img-size);
+  }
+}
+
+@keyframes fade {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.character-profile-image.unflipped {
+  animation: left-intro 0.5s ease;
+}
+
+.character-profile-image.flipped {
+  animation: right-intro 0.5s ease;
+}
+
+@keyframes left-intro {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@keyframes right-intro {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
