@@ -458,6 +458,7 @@ const MONIKA = {
   bg_alt: 'invert(93%) sepia(11%) saturate(7019%) hue-rotate(283deg) brightness(103%) contrast(82%)'
 }
 
+//TODO: GET BACKGROUND COLOURS
 const JESSE = {
   charName: "Jesse",
   main: JESSE_MAIN,

@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { CHARACTER_MANIFEST } from './characterManifest';
 import './styles.css';
 
@@ -6,6 +6,13 @@ export const CharacterSelect = () => {
   const [leftChar, setLeftChar] = useState(undefined);
   const [rightChar, setRightChar] = useState(undefined);
   const [useLeft, setUseLeft] = useState(true);
+
+  useEffect(() => {
+    if (CHARACTER_MANIFEST){
+      setLeftChar(CHARACTER_MANIFEST[Math.floor(Math.random()*CHARACTER_MANIFEST.length)]);
+      setRightChar(CHARACTER_MANIFEST[Math.floor(Math.random()*CHARACTER_MANIFEST.length)]);
+    }
+  }, [CHARACTER_MANIFEST])
 
   const onThisCharacterSelect = (char) => {
     if (useLeft) {
@@ -82,8 +89,15 @@ export const CharacterSelect = () => {
 
   return (
     <>
-      <div id="character-select-title">CHOOSE YOUR CHARACTER</div>
-      <div id="character-menu">{getCharacterProfiles()}</div>
+      <div id="versus">VS</div>
+      <div className="name-container">
+        {leftChar && <div id="left-name">{leftChar.charName}</div>}
+        {rightChar && <div id="right-name">{rightChar.charName}</div>}
+      </div>
+      <div id="character-menu">
+        <div id="character-select-title">CHOOSE YOUR FIGHTER</div>
+        {getCharacterProfiles()}
+      </div>
       <div id='character-select-container'>
         <div id="character-left">{renderCharacter(false, leftChar)}</div> 
         <div id="character-right">{renderCharacter(true, rightChar)}</div>

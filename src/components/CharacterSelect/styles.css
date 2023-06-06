@@ -8,7 +8,7 @@
   position: fixed;
   z-index: 100;
   left: 50%;
-  transform: translateX(-50%);
+  transform: translateX(-50%) translateY(-150%);
   color: white;
   font-family: 'Joystix', sans-serif;
   font-size: 2rem;
@@ -24,10 +24,6 @@
   display: flex;
   flex-direction: row;
   overflow: hidden;
-}
-
-#character-menu-container {
-  width: 100%;
 }
 
 #character-menu {
@@ -47,6 +43,39 @@
 
 #character-left {
   width: 50vw;
+}
+
+#versus {
+  left: 50%;
+  transform: translateX(-50%);
+  position: fixed;
+  z-index: 100;
+  color: white;
+  font-family: 'Joystix', sans-serif;
+  text-shadow:1px 1px 5px rgb(33, 33, 33), 1px 1px 5px rgb(33, 33, 33);
+  filter: drop-shadow(0 0 0.75rem black);
+  font-size: 6rem;
+}
+
+.name-container {
+  position: fixed;
+  z-index: 100;
+  color: white;
+  font-family: 'Joystix', sans-serif;
+  text-shadow:1px 1px 5px rgb(33, 33, 33), 1px 1px 5px rgb(33, 33, 33);
+  filter: drop-shadow(0 0 0.75rem black);
+  font-size: 4rem;
+  display: flex;
+  justify-content: space-between;
+  width: 100vw;
+}
+
+.name-container #right-name {
+  padding-right: 50px;
+}
+
+.name-container #left-name {
+  padding-left: 50px;
 }
 
 #character-right {
@@ -85,6 +114,7 @@
   width: 50vw;
   height: 100vh;
   background-size: var(--background-img-size);
+  transition: 0.3s;
 }
 
 .left-repeat {
@@ -128,27 +158,31 @@
 }
 
 .character-profile-image.unflipped {
-  animation: left-intro 0.5s ease;
+  animation: left-intro 0.3s ease;
 }
 
 .character-profile-image.flipped {
-  animation: right-intro 0.5s ease;
+  animation: right-intro 0.3s ease;
 }
 
 @keyframes left-intro {
   0% {
+    opacity: 0.4;
     transform: translateX(-100%);
   }
   100% {
+    opacity: 1;
     transform: translateX(0);
   }
 }
 
 @keyframes right-intro {
   0% {
+    opacity: 0.4;
     transform: translateX(-100%);
   }
   100% {
+    opacity: 1;
     transform: translateX(0);
   }
 }
