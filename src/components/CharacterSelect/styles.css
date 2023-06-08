@@ -4,19 +4,91 @@
   --background-img-size: 120px;
 }
 
+/* CHARACTER MENU STYLES */
+
+#character-menu {
+  position: absolute;
+  z-index: 20;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column-reverse;
+  justify-content: flex-start;
+  align-items: center;
+}
+
 #character-select-title {
-  position: fixed;
-  z-index: 100;
-  left: 50%;
-  transform: translateX(-50%) translateY(-150%);
+  z-index: 20;
   color: white;
   font-family: 'Joystix', sans-serif;
   font-size: 2rem;
   margin-top: 10px;
-  text-shadow:1px 1px 5px rgb(33, 33, 33), 1px 1px 5px rgb(33, 33, 33);
+  text-shadow: 1px 1px 5px rgb(33, 33, 33), 1px 1px 5px rgb(33, 33, 33);
   filter: drop-shadow(0 0 0.75rem black);
   animation: fade 3s ease infinite;
 }
+
+#character-icon-container {
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  flex-direction: row-reverse;
+  flex-wrap: wrap-reverse;
+  overflow: hidden;
+}
+
+.menu-thumb {
+  width: auto;
+  height: 80px;
+}
+
+.menu-thumb:hover {
+  transform: scale(1.1);
+  filter: brightness(1.2);
+  transition: 0.3s;
+}
+
+/* NAMES AND SUCH  */
+#versus {
+  left: 50%;
+  transform: translateX(-50%);
+  position: fixed;
+  z-index: 20;
+  color: white;
+  font-family: 'Joystix', sans-serif;
+  text-shadow: 1px 1px 5px rgb(33, 33, 33), 1px 1px 5px rgb(33, 33, 33);
+  filter: drop-shadow(0 0 0.75rem black);
+  font-size: 6rem;
+}
+
+.name-container {
+  position: fixed;
+  z-index: 20;
+  color: white;
+  font-family: 'Joystix', sans-serif;
+  text-shadow: 1px 1px 5px rgb(33, 33, 33), 1px 1px 5px rgb(33, 33, 33);
+  filter: drop-shadow(0 0 0.75rem black);
+  font-size: 4rem;
+  display: flex;
+  justify-content: space-between;
+  width: 100vw;
+}
+
+.name-container #right-name {
+  max-width: 40vw;
+  padding-right: 50px;
+  overflow-wrap: break-word;
+  text-align: right;
+}
+
+.name-container #left-name {
+  max-width: 40vw;
+  padding-left: 50px;
+  overflow-wrap: break-word;
+  text-align: left;
+}
+
+/* CHARACTER PORTRAITS */
 
 #character-select-container {
   width: 100vw;
@@ -26,57 +98,21 @@
   overflow: hidden;
 }
 
-#character-menu {
-  position: absolute;
-  z-index: 10;
-  bottom: 0;
+#select-gradient {
+  position: fixed;
+  ;
   width: 100vw;
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-}
-
-.menu-thumb{
-  width: auto;
-  height: 8vh
+  height: 50%;
+  background: linear-gradient(0deg, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0) 50%);
+  z-index: 9;
+  bottom: 0;
 }
 
 #character-left {
   width: 50vw;
 }
 
-#versus {
-  left: 50%;
-  transform: translateX(-50%);
-  position: fixed;
-  z-index: 100;
-  color: white;
-  font-family: 'Joystix', sans-serif;
-  text-shadow:1px 1px 5px rgb(33, 33, 33), 1px 1px 5px rgb(33, 33, 33);
-  filter: drop-shadow(0 0 0.75rem black);
-  font-size: 6rem;
-}
 
-.name-container {
-  position: fixed;
-  z-index: 100;
-  color: white;
-  font-family: 'Joystix', sans-serif;
-  text-shadow:1px 1px 5px rgb(33, 33, 33), 1px 1px 5px rgb(33, 33, 33);
-  filter: drop-shadow(0 0 0.75rem black);
-  font-size: 4rem;
-  display: flex;
-  justify-content: space-between;
-  width: 100vw;
-}
-
-.name-container #right-name {
-  padding-right: 50px;
-}
-
-.name-container #left-name {
-  padding-left: 50px;
-}
 
 #character-right {
   transform: scaleX(-1);
@@ -117,6 +153,10 @@
   transition: 0.3s;
 }
 
+.background-container {
+  transition: 0.3s;
+}
+
 .left-repeat {
   animation: scrolling-left 5s linear infinite;
 }
@@ -129,6 +169,7 @@
   0% {
     background-position: 0 0;
   }
+
   100% {
     background-position: var(--background-img-size) var(--background-img-size);
   }
@@ -138,10 +179,10 @@
   0% {
     background-position: 0 0;
   }
+
   100% {
-    background-position: 
-      calc(var(--background-img-size) *-1) 
-      var(--background-img-size);
+    background-position:
+      calc(var(--background-img-size) *-1) var(--background-img-size);
   }
 }
 
@@ -149,9 +190,11 @@
   0% {
     opacity: 1;
   }
+
   50% {
     opacity: 0;
   }
+
   100% {
     opacity: 1;
   }
@@ -170,6 +213,7 @@
     opacity: 0.4;
     transform: translateX(-100%);
   }
+
   100% {
     opacity: 1;
     transform: translateX(0);
@@ -181,6 +225,7 @@
     opacity: 0.4;
     transform: translateX(-100%);
   }
+
   100% {
     opacity: 1;
     transform: translateX(0);

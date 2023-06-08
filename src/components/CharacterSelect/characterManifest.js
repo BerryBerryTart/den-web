@@ -373,7 +373,7 @@ const BERRY = {
   main: BERRY_MAIN,
   alt: BERRY_ALT,
   thumb: BERRY_THUMB,
-  bg: '#fa557e',
+  bg: '#5643d1',
   border: '#b185ff',
   bg_alt: 'invert(74%) sepia(67%) saturate(4345%) hue-rotate(216deg) brightness(97%) contrast(111%)'
 }
@@ -434,7 +434,7 @@ const BRUNO = {
   alt: BRUNO_ALT,
   thumb: BRUNO_THUMB,
   bg: '#FFA500',
-  border: ' #A020F',
+  border: '#A020F0',
   bg_alt: 'invert(86%) sepia(79%) saturate(5999%) hue-rotate(308deg) brightness(104%) contrast(102%)'
 }
 
@@ -464,7 +464,7 @@ const JESSE = {
   main: JESSE_MAIN,
   alt: JESSE_ALT,
   thumb: JESSE_THUMB,
-  bg: '#FFFFFF',
+  bg: '#ed3838',
   border: '#000000',
   bg_alt: 'invert(0%) sepia(6%) saturate(7475%) hue-rotate(284deg) brightness(94%) contrast(106%)'
 }
@@ -557,6 +557,6 @@ export const CHARACTER_MANIFEST = [
   KELLY,
   POMPOM,
   HACHIMITSU,
-].sort((a, b) => a.charName > b.charName ? 1 : -1);
+].sort((a, b) => a.charName < b.charName ? 1 : -1);
 
 //Thank you my saviour: https://codepen.io/sosuke/pen/Pjoqqp

@@ -1,0 +1,54 @@
+#credits-container {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  z-index: 50;
+  background-color: rgba(0, 0, 0, 0.7);
+  backdrop-filter: blur(5px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#credits-names-container {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  width: 100vw;
+}
+
+#credits-names-container p {
+  font-family: 'Joystix', sans-serif;
+  color: white;
+  font-size: 1.1rem;
+  margin-top: 4px;
+  margin-bottom: 4px;
+}
+
+#artist-list {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: center;
+  width: 50vw;
+  height: 40vh;
+}
+
+#credits-left,
+#credits-right {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#credits-logo {
+  max-width: 600px;
+}
+
+.credits-title {
+  font-family: 'Joystix', sans-serif;
+  color: white;
+  font-size: 3rem;
+  padding-top: 10px;
+}
