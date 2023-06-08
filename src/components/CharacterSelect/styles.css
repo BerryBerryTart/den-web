@@ -58,7 +58,7 @@
   font-family: 'Joystix', sans-serif;
   text-shadow: 1px 1px 5px rgb(33, 33, 33), 1px 1px 5px rgb(33, 33, 33);
   filter: drop-shadow(0 0 0.75rem black);
-  font-size: 6rem;
+  font-size: calc(4.375rem + ((1vw - 9px) * 1.6043));
 }
 
 .name-container {
@@ -68,7 +68,7 @@
   font-family: 'Joystix', sans-serif;
   text-shadow: 1px 1px 5px rgb(33, 33, 33), 1px 1px 5px rgb(33, 33, 33);
   filter: drop-shadow(0 0 0.75rem black);
-  font-size: 4rem;
+  font-size: calc(2.5rem + ((1vw - 17.12px) * 2));
   display: flex;
   justify-content: space-between;
   width: 100vw;

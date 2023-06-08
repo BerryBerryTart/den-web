@@ -30,9 +30,9 @@ import TERRY_MAIN from '../../assets/CHARACTERS/Terry.png';
 import TERRY_ALT from '../../assets/CHARACTERS/Terry_ALT.png';
 import TERRY_THUMB from '../../assets/CHARACTERS/Terry_THUMBNAIL.png';
 
-import LAURUM_MAIN from '../../assets/CHARACTERS/Laurum.png';
-import LAURUM_ALT from '../../assets/CHARACTERS/Laurum_ALT.png';
-import LAURUM_THUMB from '../../assets/CHARACTERS/Laurum_THUMBNAIL.png';
+import LAUREN_MAIN from '../../assets/CHARACTERS/Laurum.png';
+import LAUREN_ALT from '../../assets/CHARACTERS/Laurum_ALT.png';
+import LAUREN_THUMB from '../../assets/CHARACTERS/Laurum_THUMBNAIL.png';
 
 import MONKELAD_MAIN from '../../assets/CHARACTERS/MonkeLad.png';
 import MONKELAD_ALT from '../../assets/CHARACTERS/MonkeLad_ALT.png';
@@ -146,6 +146,9 @@ import HACHIMITSU_MAIN from '../../assets/CHARACTERS/Hachimitsu.png';
 import HACHIMITSU_ALT from '../../assets/CHARACTERS/Hachimitsu_ALT.png';
 import HACHIMITSU_THUMB from '../../assets/CHARACTERS/Hachimitsu_THUMBNAIL.png';
 
+import NARCA_MAIN from '../../assets/CHARACTERS/Narca.png';
+import NARCA_ALT from '../../assets/CHARACTERS/Narca_ALT.png';
+import NARCA_THUMB from '../../assets/CHARACTERS/Narca_THUMBNAIL.png';
 
 const CAMILLE = {
   charName: "Camille",
@@ -228,11 +231,11 @@ const TERRY = {
   bg_alt: 'invert(46%) sepia(55%) saturate(450%) hue-rotate(152deg) brightness(89%) contrast(92%)'
 }
 
-const LAURUM = {
-  charName: "Laurum Ipsum",
-  main: LAURUM_MAIN,
-  alt: LAURUM_ALT,
-  thumb: LAURUM_THUMB,
+const LAUREN = {
+  charName: "Lauren Ipsum",
+  main: LAUREN_MAIN,
+  alt: LAUREN_ALT,
+  thumb: LAUREN_THUMB,
   bg: '#d97ef7',
   border: '#ffc72e',
   bg_alt: 'invert(76%) sepia(52%) saturate(657%) hue-rotate(348deg) brightness(102%) contrast(101%)'
@@ -519,6 +522,16 @@ const HACHIMITSU = {
   bg_alt: 'invert(37%) sepia(18%) saturate(0%) hue-rotate(212deg) brightness(99%) contrast(99%)'
 }
 
+const NARCA = {
+  charName: "Narca Aquino",
+  main: NARCA_MAIN,
+  alt: NARCA_ALT,
+  thumb: NARCA_THUMB,
+  bg: '#fae6aa',
+  border: '#6ed8d1',
+  bg_alt: 'invert(97%) sepia(79%) saturate(5862%) hue-rotate(155deg) brightness(90%) contrast(88%)'
+}
+
 export const CHARACTER_MANIFEST = [
   CAMILLE,
   CONI,
@@ -528,7 +541,7 @@ export const CHARACTER_MANIFEST = [
   SHAULA,
   SONNY,
   TERRY,
-  LAURUM,
+  LAUREN,
   MONKELAD,
   LILLIAN,
   VICCY,
@@ -557,6 +570,7 @@ export const CHARACTER_MANIFEST = [
   KELLY,
   POMPOM,
   HACHIMITSU,
+  NARCA,
 ].sort((a, b) => a.charName < b.charName ? 1 : -1);
 
 //Thank you my saviour: https://codepen.io/sosuke/pen/Pjoqqp
