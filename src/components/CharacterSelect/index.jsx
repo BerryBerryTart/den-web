@@ -104,7 +104,7 @@ export const CharacterSelect = ({ sound }) => {
         <div id="character-icon-container">
           {getCharacterProfiles()}
         </div>
-        <div id="character-select-title">CHOOSE YOUR FIGHTER</div>
+        <div id="character-select-title">{useLeft ? "P1 " : "P2 "}CHOOSE YOUR FIGHTER</div>
       </div>
       <div id='character-select-container'>
         <div id="character-left">{renderCharacter(false, leftChar)}</div>

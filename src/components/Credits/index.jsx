@@ -1,10 +1,28 @@
-import React from 'react';
+import React, {useState, useEffect} from 'react';
 import './styles.css';
 import CREDITS_LOGO from '../../assets/UI/den-credits.png';
 
-export const Credits = () => {
+const FADE_DELAY = 650;
+export const Credits = ({shouldShow}) => {
+  const [toggleCredits, setToggleCredits] = useState(false);
+  const [credClasses, setCredClasses] = useState("credits-container credits-container-hidden");
+
+  useEffect(() => {
+    if (!shouldShow){ //toggles to hide
+      setCredClasses("credits-container cred-fade-out");
+      setTimeout(() => { //HIDES
+        setCredClasses("credits-container credits-container-hidden");
+        setToggleCredits(false);
+      }, FADE_DELAY);
+    } else { //toggles to show
+      setToggleCredits(true);
+      setCredClasses("credits-container cred-fade-in");
+    }
+  }, [shouldShow]);
+
   return (
-    <div id="credits-container">
+    <>{ toggleCredits &&
+    <div className={credClasses}>
       <div id='credits-logo-container'>
         <img id="credits-logo" src={CREDITS_LOGO} alt="CREDITS LOGO" />
       </div>
@@ -67,6 +85,6 @@ export const Credits = () => {
           <p>Street Fighter II</p>
         </div>
       </div>
-    </div>
+    </div> }</>
   );
 }

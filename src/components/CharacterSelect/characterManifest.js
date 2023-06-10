@@ -210,15 +210,14 @@ const SHAULA = {
   bg_alt: 'invert(7%) sepia(34%) saturate(1029%) hue-rotate(271deg) brightness(97%) contrast(96%)'
 }
 
-//TODO: GET BACKGROUND COLOURS
 const SONNY = {
   charName: "Sonny",
   main: SONNY_MAIN,
   alt: SONNY_ALT,
   thumb: SONNY_THUMB,
-  bg: '#fff',
-  border: '#000',
-  bg_alt: 'invert(0%) sepia(7%) saturate(0%) hue-rotate(113deg) brightness(107%) contrast(107%)'
+  bg: '#F3954A',
+  border: '#C5E473',
+  bg_alt: 'invert(87%) sepia(2%) saturate(6830%) hue-rotate(30deg) brightness(96%) contrast(100%)'
 }
 
 const TERRY = {

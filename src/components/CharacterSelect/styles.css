@@ -39,7 +39,7 @@
 
 .menu-thumb {
   width: auto;
-  height: 80px;
+  height: min(max(73px, calc(4.5625rem + ((1vw - 17px) * 4.0909))), 90px);
 }
 
 .menu-thumb:hover {
@@ -111,8 +111,6 @@
 #character-left {
   width: 50vw;
 }
-
-
 
 #character-right {
   transform: scaleX(-1);
